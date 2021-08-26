@@ -15,7 +15,7 @@ function renderXAxes(newXScale, xAxis) {
 function xScale(data, chosenXAxis, chartWidth) {
     // Create the LinearScale
     var xLinearScale = d3.scaleLinear()
-        .domaain([d3.min(data, d => d[chosenXAxis]) * .8,
+        .domain([d3.min(data, d => d[chosenXAxis]) * .8,
             d3.max(data, d => d[chosenXAxis]) * 1.1])
         .range([0, chartWidth]);
     return xLinearScale;
